@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ali khangaldi type Conversion</title>
+<style>
+    body{
+        background-color: rgb(111, 121, 82);
+        text-align: center;
+        }
+     div{
+         margin: 1%;
+        }
+</style>
+    </head>
+    <body>
+        <h1> Ali khangaldi type conversion </h1>
+        <div>
+            inch: <input type="text" value="" oninput="convertinch2cm()" id="inch"> = cm: <input type="text" id="cm" oninput="convertcm2inch()" value="">
+        </div>
+        <div>
+            lb: <input type="text" value="" oninput="convertlb2kg()" id="lb"> = kg: <input type="text" id="kg" oninput="convertkg2lb()" value="">
+        </div>
+        <div>
+            celsius: <input type="text" value="" oninput="convertcelsius2kelvin()" id="celsius"> = kelvin: <input type="text" id="kelvin" oninput="convertkelvin2celsius()" value="">
+        </div>
+        <div>
+            pascal: <input type="text" value="" oninput="convertpascal2bar()" id="pascal"> = bar: <input type="text" id="bar" oninput="convertbar2pascal()" value="">
+        </div>
+        <div>
+            joule: <input type="text" value="" oninput="convertjoule2calorie()" id="joule"> = calorie: <input type="text" id="calorie" oninput="convertcalorie2joule()" value="">
+        </div>
+        <script>
+            function convertcm2inch()
+            {
+             document.getElementById("inch").value=document.getElementById("cm").value/2.54
+            }
+             function convertinch2cm()
+            {
+             document.getElementById("cm").value=document.getElementById("inch").value*2.54
+            }
+             function convertlb2kg()
+            {
+             document.getElementById("kg").value=document.getElementById("lb").value/2.2
+            }
+             function convertkg2lb()
+            {
+             document.getElementById("lb").value=document.getElementById("kg").value*2.2   
+            }
+             function convertcelsius2kelvin()
+            {
+             document.getElementById("kelvin").value=document.getElementById("celsius").value*1+273
+            }
+             function convertkelvin2celsius()
+            {
+             document.getElementById("celsius").value=document.getElementById("kelvin").value*1-273
+            }
+             function  convertpascal2bar()
+            {
+             document.getElementById("bar").value=document.getElementById("pascal").value*0.00001
+            }
+             function convertbar2pascal()
+            {
+             document.getElementById("pascal").value=document.getElementById("bar").value*100000 
+            }
+             function convertjoule2calorie()
+            {
+             document.getElementById("calorie").value=document.getElementById("joule").value*1/4.184
+            }
+             function convertcalorie2joule()
+            {
+             document.getElementById("joule").value=document.getElementById("calorie").value*4.184
+            }
+        </script>
+    </body>
+</html>
